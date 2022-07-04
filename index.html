@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searching from table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <form class="d-flex mt-5">
+            <input id="myinput" class="form-control me-2" type="text" onkeyup="myFunction()" placeholder="Search....">
+        </form>
+        <table id="mytable" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                    <th scope="col">Champuk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Ark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>dsfsda</td>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>dsfsdfdfda</td>
+                </tr>
+                <tr>
+                    <td scope="row">3</td>
+                    <td>Darark</td>
+                    <td>Jonto</td>
+                    <td>@mdo</td>
+                    <td>aadsf4ersda</td>
+                </tr>
+                <tr>
+                    <td scope="row">4</td>
+                    <td>Rasoacob</td>
+                    <td>Deornton</td>
+                    <td>@fat</td>
+                    <td>opoiuyrfd</td>
+                </tr>
+                <tr>
+                    <td scope="row">5</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>xcvb</td>
+                </tr>
+                <tr>
+                    <td scope="row">6</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>tgbnmjghf</td>
+                </tr>
+                <tr>
+                    <td scope="row">7</td>
+                    <td>Darark</td>
+                    <td>Jonto</td>
+                    <td>@mdo</td>
+                    <td>qscvcc</td>
+                </tr>
+                <tr>
+                    <td scope="row">8</td>
+                    <td>Rasoacob</td>
+                    <td>Deornton</td>
+                    <td>@fat</td>
+                    <td>mbvsd</td>
+                </tr>
+                <tr>
+                    <td scope="row">9</td>
+                    <td>Abul</td>
+                    <td>Jonto</td>
+                    <td>@mdo</td>
+                    <td>qazxcv</td>
+                </tr>
+                <tr>
+                    <td scope="row">10</td>
+                    <td>Ajib</td>
+                    <td>Deornton</td>
+                    <td>@fat</td>
+                    <td>gfgfds</td>
+                </tr>
+                <tr>
+                    <td scope="row">11</td>
+                    <td>Tabul</td>
+                    <td>Tornton</td>
+                    <td>@fat</td>
+                    <td>4545ff</td>
+                </tr>
+                <tr>
+                    <td scope="row">12</td>
+                    <td>Babul</td>
+                    <td>Jonto</td>
+                    <td>@mdo</td>
+                    <td>bvcdfsa fd</td>
+                </tr>
+                <tr>
+                    <td scope="row">13</td>
+                    <td>Habul</td>
+                    <td>Deornton</td>
+                    <td>@fat</td>
+                    <td>7985</td>
+                </tr>
+                <tr>
+                    <td scope="row">14</td>
+                    <td>Kabul</td>
+                    <td>Jonto</td>
+                    <td>@mdo</td>
+                    <td>#fd344</td>
+                </tr>
+                <tr>
+                    <td scope="row">15</td>
+                    <td>Nabul</td>
+                    <td>Deornton</td>
+                    <td>@fat</td>
+                    <td>qazxvgy</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- <script>
+            function myFunction() {
+              // Declare variables
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myinput");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("mytable");
+              tr = table.getElementsByTagName("tr");
+            
+              // Loop through all table rows, and hide those who don't match the search query
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                }
+              }
+            }
+            </script> -->
+
+            <script>
+                function myFunction() {  
+                  // Declare variables
+                  var input, filter, table, tr, td, i, txtValue,status = 0;
+                  input = document.getElementById("myinput");
+                  filter = input.value.toUpperCase();
+                  table = document.getElementById("mytable");
+                  tr = table.getElementsByTagName("tr");
+                
+                  // Loop through all table rows, and hide those who don't match the search query
+                  for (i = 0; i < tr.length; i++) {
+                    tempTd = tr[i].getElementsByTagName("td");
+                    status = 0;
+                    
+                    for(j=0; j<tempTd.length;j++)
+                    {
+                        td = tempTd[j];
+                        if (td) {
+                          txtValue = td.textContent || td.innerText;
+                          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            status=1;
+                          }
+                          if(!status) 
+                            {
+                            status=0;
+                          }
+                        }
+
+                    }
+
+                    if(status)
+                    {
+                        tr[i].style.display = "";
+                    }
+                    else
+                    {
+                        tr[i].style.display = "none";
+                    }
+                  }
+                }
+                </script>
+</body>
+
+</html>
