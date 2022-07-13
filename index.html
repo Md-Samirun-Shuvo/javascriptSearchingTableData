@@ -26,105 +26,105 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">1</td>
                     <td>Ark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
                     <td>dsfsda</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">2</td>
                     <td>Jacob</td>
                     <td>Thornton</td>
                     <td>@fat</td>
                     <td>dsfsdfdfda</td>
-                </tr>
-                <tr>
+                </tr class="searchData">
+                <tr class="searchData">
                     <td scope="row">3</td>
                     <td>Darark</td>
                     <td>Jonto</td>
                     <td>@mdo</td>
                     <td>aadsf4ersda</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">4</td>
                     <td>Rasoacob</td>
                     <td>Deornton</td>
                     <td>@fat</td>
                     <td>opoiuyrfd</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">5</td>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
                     <td>xcvb</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">6</td>
                     <td>Jacob</td>
                     <td>Thornton</td>
                     <td>@fat</td>
                     <td>tgbnmjghf</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">7</td>
                     <td>Darark</td>
                     <td>Jonto</td>
                     <td>@mdo</td>
                     <td>qscvcc</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">8</td>
                     <td>Rasoacob</td>
                     <td>Deornton</td>
                     <td>@fat</td>
                     <td>mbvsd</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">9</td>
                     <td>Abul</td>
                     <td>Jonto</td>
                     <td>@mdo</td>
                     <td>qazxcv</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">10</td>
                     <td>Ajib</td>
                     <td>Deornton</td>
                     <td>@fat</td>
                     <td>gfgfds</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">11</td>
                     <td>Tabul</td>
                     <td>Tornton</td>
                     <td>@fat</td>
                     <td>4545ff</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">12</td>
                     <td>Babul</td>
                     <td>Jonto</td>
                     <td>@mdo</td>
                     <td>bvcdfsa fd</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">13</td>
                     <td>Habul</td>
                     <td>Deornton</td>
                     <td>@fat</td>
                     <td>7985</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">14</td>
                     <td>Kabul</td>
                     <td>Jonto</td>
                     <td>@mdo</td>
                     <td>#fd344</td>
                 </tr>
-                <tr>
+                <tr class="searchData">
                     <td scope="row">15</td>
                     <td>Nabul</td>
                     <td>Deornton</td>
@@ -173,7 +173,7 @@
                   input = document.getElementById("myinput");
                   filter = input.value.toUpperCase();
                   table = document.getElementById("mytable");
-                  tr = table.getElementsByTagName("tr");
+                  tr = table.querySelectorAll(".searchData");
                 
                   // Loop through all table rows, and hide those who don't match the search query
                   for (i = 0; i < tr.length; i++) {
